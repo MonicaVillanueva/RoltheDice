@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>   
+    
+<resources>
+
+    <string name="app_name">Rol the Dice</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_dice">Dice</string>
+    
+    <string name="welcome">Welcome to:</string>   
+    <string name="tap">Tap the screen to continue</string>
+    
+    <!-- Menus -->
+    <string name="menu_stats">Show statistics</string>  
+    <string name="menu_dices">Change tipe of dice</string>
+    <string name="menu_number">Change number of dices</string>
+
+</resources>

@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="summer.app.DiceActivity" >
+    
+    <item
+        android:id="@+id/menu_stats"
+        android:showAsAction="always|withText"
+        android:title="@string/menu_stats"/>
+ 
+    <item
+        android:id="@+id/menu_dices"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/menu_dices"/>
+    
+     <item
+        android:id="@+id/menu_number"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/menu_number"/>
+
+</menu>
