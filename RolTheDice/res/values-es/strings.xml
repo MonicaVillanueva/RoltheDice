@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>   
+    
+<resources>
+
+    <string name="app_name">Rol the Dice</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Ajustes</string>
+    <string name="title_activity_dice">Dado</string>
+    
+    <!-- Inicio -->
+    <string name="welcome">Bienvenido a:</string>   
+    <string name="tap">Toca la pantalla para continuar</string> 
+    <string name="logo">Logo de la aplicación</string> 
+    
+    <!-- Menus -->
+    <string name="menu_stats">Ver estadísticas</string>  
+    <string name="menu_dices">Cambiar tipo de dado</string>
+    <string name="menu_number">Cambiar número de dados</string>
+    
+    <!-- Dices -->
+    <string name="d4">Dado de 4 caras</string>  
+    <string name="d6">Dado de 6 caras</string>  
+    <string name="d8">Dado de 8 caras</string>  
+    <string name="d10">Dado de 10 caras</string>  
+    <string name="d12">Dado de 12 caras</string>  
+    <string name="d20">Dado de 20 caras</string>  
+    <string name="d100">Dado de 100 caras</string>  
+    <string name="custom">Personaliza tu propio dado</string>  
+    
+
+</resources>

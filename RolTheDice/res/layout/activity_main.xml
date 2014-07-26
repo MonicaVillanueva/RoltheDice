@@ -26,6 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:src="@drawable/dados"
+        android:contentDescription="@string/logo"
         android:id="@+id/img_princ"
     />
     

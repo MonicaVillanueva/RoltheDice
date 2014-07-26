@@ -7,12 +7,25 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_dice">Dice</string>
     
+    <!-- Inicio -->
     <string name="welcome">Welcome to:</string>   
-    <string name="tap">Tap the screen to continue</string>
+    <string name="tap">Tap the screen to continue</string> 
+    <string name="logo">Logo application</string> 
     
     <!-- Menus -->
     <string name="menu_stats">Show statistics</string>  
     <string name="menu_dices">Change tipe of dice</string>
     <string name="menu_number">Change number of dices</string>
+    
+    <!-- Dices -->
+    <string name="d4">4-sided dice</string>  
+    <string name="d6">6-sided dice</string>  
+    <string name="d8">8-sided dice</string>  
+    <string name="d10">10-sided dice</string>  
+    <string name="d12">12-sided dice</string>  
+    <string name="d20">20-sided dice</string>  
+    <string name="d100">100-sided dice</string>  
+    <string name="custom">Customize your own dice</string>  
+    
 
 </resources>

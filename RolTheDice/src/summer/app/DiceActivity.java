@@ -1,32 +1,30 @@
 package summer.app;
 
+import summer.app.R;
+
 import java.util.Calendar;
 import java.util.Random;
 
-import summer.app.MainActivity.PlaceholderFragment;
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
-import android.support.v4.app.Fragment;
-import android.support.v4.view.MotionEventCompat;
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v4.app.Fragment;
+import android.support.v4.view.MotionEventCompat;
+import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
-import android.os.Build;
 
 public class DiceActivity extends ActionBarActivity {
 	
 	private static final Random r = new Random(Calendar.getInstance().getTimeInMillis());
 	private int flag = 1; //Inicialmente, dado en movimiento
+	private int min;
+	private int max;
 	private Handler handler;
 	private Runnable runnable;
 	
@@ -48,16 +46,28 @@ public class DiceActivity extends ActionBarActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_dice);	
-		
-		//Localizar los controles
-        final TextView dice = (TextView)findViewById(R.id.txt_dice);
         
+        //Establecer minimo y maximo
+        Bundle bundle = this.getIntent().getExtras();
+        min = bundle.getInt("VMIN");
+        Log.d("DiceActivity", "min: "+ min);
+        max = bundle.getInt("VMAX");
+        Log.d("DiceActivity", "max: "+ max);
+        
+        //Localizar los controles
+        final TextView dice = (TextView)findViewById(R.id.txt_dice);
+        //Titulo
+        int numtitle = max - min + 1;
+        Log.d("DiceActivity", "titulo: "+ numtitle);
+        this.setTitle(Integer.toString(numtitle)+"-D"); 
+        
+        //Bucle dado
         handler = new Handler();
         runnable = new Runnable() {        	
         	public void run(){
-            	int num = tirarDado(1,6);
+            	int num = tirarDado(min,max);
             	while (Integer.toString(num).equals(dice.getText())){
-            		 num = tirarDado(1,6);        		
+            		 num = tirarDado(min, max);        		
             	}
             	dice.setText(Integer.toString(num)); 
             	handler.postDelayed(this, 250);
@@ -71,7 +81,7 @@ public class DiceActivity extends ActionBarActivity {
 		
 		//Localizar los controles
         final TextView dice = (TextView)findViewById(R.id.txt_dice);
-        final TextView res = (TextView)findViewById(R.id.txt_result);
+        final TextView res = (TextView)findViewById(R.id.txt_result); 
         
         int action = MotionEventCompat.getActionMasked(event);
 		
@@ -81,9 +91,9 @@ public class DiceActivity extends ActionBarActivity {
 			handler.removeCallbacks(runnable);			
 			
 			//Un random mas
-        	int num = tirarDado(1,6);
+        	int num = tirarDado(min, max);
         	while (Integer.toString(num).equals(dice.getText())){
-        		 num = tirarDado(1,6);        		
+        		 num = tirarDado(min, max);        		
         	}
         	dice.setText(Integer.toString(num)); 
         	res.setText(Integer.toString(num));
@@ -121,14 +131,89 @@ public class DiceActivity extends ActionBarActivity {
 		// automatically handle clicks on the Home/Up button, so long
 		// as you specify a parent activity in AndroidManifest.xml.
 		
+		int numtitle;
+		
 		switch (item.getItemId()) { 
 		case R.id.menu_stats:
             
 
             return true;
-        case R.id.menu_dices:
+        case R.id.d4:
+        	//Valores
+        	min = 1;
+        	max = 4;  
+        	
+        	//Titulo
+            numtitle = max - min + 1;
+            Log.d("DiceActivity", "titulo: "+ numtitle);
+            this.setTitle(Integer.toString(numtitle)+"-D"); 
             
-
+            return true;
+        case R.id.d6:
+        	//Valores
+        	min = 1;
+        	max = 6;  
+        	
+        	//Titulo
+            numtitle = max - min + 1;
+            Log.d("DiceActivity", "titulo: "+ numtitle);
+            this.setTitle(Integer.toString(numtitle)+"-D");  
+            
+            return true;
+        case R.id.d8:
+        	//Valores
+        	min = 1;
+        	max = 8; 
+        	
+        	//Titulo
+            numtitle = max - min + 1;
+            Log.d("DiceActivity", "titulo: "+ numtitle);
+            this.setTitle(Integer.toString(numtitle)+"-D"); 
+            
+            return true;
+        case R.id.d10:
+        	//Valores
+        	min = 1;
+        	max = 10;  
+        	
+        	//Titulo
+            numtitle = max - min + 1;
+            Log.d("DiceActivity", "titulo: "+ numtitle);
+            this.setTitle(Integer.toString(numtitle)+"-D"); 
+            
+            return true;
+        case R.id.d12:
+        	//Valores
+        	min = 1;
+        	max = 12;  
+        	
+        	//Titulo
+            numtitle = max - min + 1;
+            Log.d("DiceActivity", "titulo: "+ numtitle);
+            this.setTitle(Integer.toString(numtitle)+"-D"); 
+            
+            return true;
+        case R.id.d20:
+        	//Valores
+        	min = 1;
+        	max = 20;  
+        	
+        	//Titulo
+            numtitle = max - min + 1;
+            Log.d("DiceActivity", "titulo: "+ numtitle);
+            this.setTitle(Integer.toString(numtitle)+"-D"); 
+            
+            return true;
+        case R.id.d100:
+        	//Valores
+        	min = 1;
+        	max = 100;  
+        	
+        	//Titulo
+            numtitle = max - min + 1;
+            Log.d("DiceActivity", "titulo: "+ numtitle);
+            this.setTitle(Integer.toString(numtitle)+"-D"); 
+            
             return true;
         case R.id.menu_number:
             

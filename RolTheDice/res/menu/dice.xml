@@ -5,13 +5,42 @@
     
     <item
         android:id="@+id/menu_stats"
-        android:showAsAction="always|withText"
+        android:showAsAction="always|withText"        
+        android:src="@drawable/stats"
         android:title="@string/menu_stats"/>
  
     <item
         android:id="@+id/menu_dices"
         android:showAsAction="ifRoom|withText"
-        android:title="@string/menu_dices"/>
+        android:title="@string/menu_dices">
+        <menu>
+            <item 
+                android:id="@+id/d4"
+                android:title="@string/d4"/>
+            <item 
+                android:id="@+id/d6"
+                android:title="@string/d6"/>
+            <item 
+                android:id="@+id/d8"
+                android:title="@string/d8"/>
+            <item 
+                android:id="@+id/d10"
+                android:title="@string/d10"/>
+            <item 
+                android:id="@+id/d12"
+                android:title="@string/d12"/>
+            <item 
+                android:id="@+id/d20"
+                android:title="@string/d20"/>
+            <item 
+                android:id="@+id/d100"
+                android:title="@string/d100"/> 
+            <item 
+                android:id="@+id/personalized"
+                android:title="@string/custom"/>
+        </menu>
+        
+     </item>
     
      <item
         android:id="@+id/menu_number"

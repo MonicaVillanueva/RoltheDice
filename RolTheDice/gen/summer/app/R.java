@@ -983,6 +983,7 @@ containing a value of this type.
         public static final int abc_textfield_searchview_right_holo_light=0x7f020056;
         public static final int dados=0x7f020057;
         public static final int ic_launcher=0x7f020058;
+        public static final int stats=0x7f020059;
     }
     public static final class id {
         public static final int LinearLayout1=0x7f05003e;
@@ -1002,6 +1003,13 @@ containing a value of this type.
         public static final int beginning=0x7f050011;
         public static final int checkbox=0x7f05002d;
         public static final int collapseActionView=0x7f05000d;
+        public static final int d10=0x7f050048;
+        public static final int d100=0x7f05004b;
+        public static final int d12=0x7f050049;
+        public static final int d20=0x7f05004a;
+        public static final int d4=0x7f050045;
+        public static final int d6=0x7f050046;
+        public static final int d8=0x7f050047;
         public static final int default_activity_button=0x7f050028;
         public static final int dialog=0x7f05000e;
         public static final int disableHome=0x7f050008;
@@ -1019,12 +1027,13 @@ containing a value of this type.
         public static final int listMode=0x7f050001;
         public static final int list_item=0x7f050029;
         public static final int menu_dices=0x7f050044;
-        public static final int menu_number=0x7f050045;
+        public static final int menu_number=0x7f05004d;
         public static final int menu_stats=0x7f050043;
         public static final int middle=0x7f050012;
         public static final int never=0x7f050009;
         public static final int none=0x7f050010;
         public static final int normal=0x7f050000;
+        public static final int personalized=0x7f05004c;
         public static final int progress_circular=0x7f050018;
         public static final int progress_horizontal=0x7f050019;
         public static final int radio=0x7f05002f;
@@ -1158,14 +1167,30 @@ containing a value of this type.
         public static final int abc_shareactionprovider_share_with_application=0x7f0a000b;
         public static final int action_settings=0x7f0a000f;
         public static final int app_name=0x7f0a000d;
-        public static final int hello_world=0x7f0a000e;
-        public static final int menu_dices=0x7f0a0014;
-        public static final int menu_number=0x7f0a0015;
-        /**  Menus 
+        public static final int custom=0x7f0a001e;
+        public static final int d10=0x7f0a001a;
+        public static final int d100=0x7f0a001d;
+        public static final int d12=0x7f0a001b;
+        public static final int d20=0x7f0a001c;
+        /**  Dices 
+ Dices 
          */
-        public static final int menu_stats=0x7f0a0013;
+        public static final int d4=0x7f0a0017;
+        public static final int d6=0x7f0a0018;
+        public static final int d8=0x7f0a0019;
+        public static final int hello_world=0x7f0a000e;
+        public static final int logo=0x7f0a0013;
+        public static final int menu_dices=0x7f0a0015;
+        public static final int menu_number=0x7f0a0016;
+        /**  Menus 
+ Menus 
+         */
+        public static final int menu_stats=0x7f0a0014;
         public static final int tap=0x7f0a0012;
         public static final int title_activity_dice=0x7f0a0010;
+        /**  Inicio 
+ Inicio 
+         */
         public static final int welcome=0x7f0a0011;
     }
     public static final class style {
